@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
     <title>Web Clicker</title>
 </head>
 
@@ -27,14 +28,11 @@
     <div class="main-container">
         <div class="row">
             <div class="column">
-
-                <div class="click-me">
-                    <p class="click-text">Click me!</p>
-                </div>
+                <div class="click-me" onclick="handleClick()"></div>
             </div>
+            
             <div class="column">
-                <p class="display-main-number">0</p>
-                <p class="display-per-second">
+                <p id="display-main-number">0</p>
                 <div class="per-sec">0</div>per second</p>
             </div>
             <div class="column">
@@ -62,7 +60,7 @@
                         </li>
                         <li>
                             <div id="nuclear-pp-counter">0</div>
-                            <div class="buy">Buy Nuclear Powerplant</div>
+                            <div class="buy">Buy Nuclear</div>
                         </li>
                     </ul>
                 </div>
@@ -84,6 +82,7 @@
                 </div>
             </div>
         </div>
+        
 </body>
 
 </html>

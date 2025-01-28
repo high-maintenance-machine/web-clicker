@@ -86,6 +86,7 @@ body {
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
+    color: var(--brown);
 }
 
 li {
@@ -132,7 +133,7 @@ nav {
     align-items: center;
 }
 
-.display-main-number {
+#display-main-number {
     font-size: 10em;
 }
 
@@ -152,12 +153,14 @@ nav {
 }
 
 .buy { 
-    border: 1px solid black;
+    border: 1px solid var(--brown);
 }
 
 .click-me {
-    width: 150px;
-    height: 150px;
+    width: 20vw; /* 20% of the viewport width */
+    height: 20vw; /* Maintain aspect ratio */
+    max-width: 200px; /* Limit maximum size */
+    max-height: 200px; /* Limit maximum size */
     background-color: var(--brown);
     border-radius: 50%;
     display: flex;
@@ -165,6 +168,19 @@ nav {
     align-items: center;
     padding: 5%;
     margin: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+
+}
+
+.click-me:hover {
+    background-color: var(--warm-pink); /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the circle */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.click-me:active {
+    transform: scale(0.9); /* Shrink slightly when clicked */
+    transition: transform 0.1s ease;
 }
 
 .click-text {
