@@ -67,7 +67,7 @@ h6 {
 /*************************************/
 
 :root {
-    --brown: #B25313;
+    --brown: #8A400F;
     --peach-yellow: #F9DEAC;
     --cream-yellow: #FBE9C7;
     --warm-pink: #F95480;
@@ -88,6 +88,10 @@ body {
       "wdth" 100;
 }
 
+li {
+    list-style-type: none;
+}
+
 nav {
     background-color: var(--peach-yellow);
 }
@@ -97,7 +101,6 @@ nav {
 }
 
 .nav-list li { 
-    list-style-type: none;
     display: inline-block;
     padding: 2%;
 }
@@ -110,4 +113,64 @@ nav {
 .nav-list li a:hover {
     color: var(--warm-pink);
     font-size: large;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+}
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-main-number {
+    font-size: 10em;
+}
+
+.display-per-second {
+    font-size: 4em;
+}
+
+.list-container {
+    width: 50%;
+    margin: 5%;
+}
+
+.list-container li div {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+}
+
+.buy { 
+    border: 1px solid black;
+}
+
+.click-me {
+    width: 150px;
+    height: 150px;
+    background-color: var(--brown);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin: 5%;
+}
+
+.click-text {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 75px;
+    text-align: center;
+    color: var(--peach-yellow);
 }
