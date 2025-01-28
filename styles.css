@@ -1,0 +1,113 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3 & 4 below
+
+  /* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+/*************************************/
+
+:root {
+    --brown: #B25313;
+    --peach-yellow: #F9DEAC;
+    --cream-yellow: #FBE9C7;
+    --warm-pink: #F95480;
+}
+
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--cream-yellow);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+nav {
+    background-color: var(--peach-yellow);
+}
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li { 
+    list-style-type: none;
+    display: inline-block;
+    padding: 2%;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+.nav-list li a:hover {
+    color: var(--warm-pink);
+    font-size: large;
+}
