@@ -95,6 +95,7 @@ li {
 
 nav {
     background-color: var(--peach-yellow);
+    padding: 1rem;
 }
 .nav-list {
     display: flex;
@@ -124,7 +125,7 @@ nav {
     margin-top: 5%;
 }
   
-  .column {
+.column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -152,11 +153,17 @@ nav {
     margin: 5px;
 }
 
-.buy { 
+.buy-btn { 
     border: 1px solid var(--brown);
 }
 
-.click-me {
+.buy-btn:hover {
+    cursor: pointer;
+    background-color: var(--brown);
+    color: var(--cream-yellow)
+}
+
+#click-me {
     width: 20vw; /* 20% of the viewport width */
     height: 20vw; /* Maintain aspect ratio */
     max-width: 200px; /* Limit maximum size */
@@ -172,21 +179,18 @@ nav {
 
 }
 
-.click-me:hover {
-    background-color: var(--warm-pink); /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge the circle */
+#click-me:hover {
+    background-color: var(--warm-pink);
+    transform: scale(0.9); 
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
-.click-me:active {
-    transform: scale(0.9); /* Shrink slightly when clicked */
+#click-me:active {
+    transform: scale(1.1); 
     transition: transform 0.1s ease;
 }
 
-.click-text {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 75px;
-    text-align: center;
-    color: var(--peach-yellow);
+
+.display-inline {
+    display: inline-block;
 }

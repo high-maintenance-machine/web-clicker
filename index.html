@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <script src="script.js"></script>
     <title>Web Clicker</title>
 </head>
 
@@ -28,9 +28,9 @@
     <div class="main-container">
         <div class="row">
             <div class="column">
-                <div class="click-me" onclick="handleClick()"></div>
+                <div id="click-me"></div>
             </div>
-            
+
             <div class="column">
                 <p id="display-main-number">0</p>
                 <div class="per-sec">0</div>per second</p>
@@ -38,51 +38,36 @@
             <div class="column">
                 <div class="list-container">
                     <ul>
-                        <li>
-                            <div id="clicker-counter">0</div>
-                            <div class="buy">Buy Clicker</div>
-                        </li>
-                        <li>
-                            <div id="farm-counter">0</div>
-                            <div class="buy">Buy Farm</div>
-                        </li>
-                        <li>
-                            <div id="mine-counter">0</div>
-                            <div class="buy">Buy Mine</div>
-                        </li>
-                        <li>
-                            <div id="factory-counter">0</div>
-                            <div class="buy">Buy Factory</div>
-                        </li>
-                        <li>
-                            <div id="lab-counter">0</div>
-                            <div class="buy">Buy Lab</div>
-                        </li>
-                        <li>
-                            <div id="nuclear-pp-counter">0</div>
-                            <div class="buy">Buy Nuclear</div>
-                        </li>
+                        <li><div id="clicker-price">0</div><div class="buy-btn" id="buy-clicker">Buy Clicker</div></li>
+                        <li><div id="farm-price">0</div><div class="buy-btn" id="buy-farm" >Buy Farm</div></li>
+                        <li><div id="mine-price">0</div><div class="buy-btn" id="buy-mine" >Buy Mine</div></li>
+                        <li><div id="factory-price">0</div><div class="buy-btn" id="buy-factory" >Buy Factory</div></li>
+                        <li><div id="lab-price">0</div><div class="buy-btn" id="buy-lab" >Buy Lab</div></li>
+                        <li><div id="nuclear-price">0</div><div class="buy-btn" id="buy-nuclear">Buy Nuclear</div></li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="column">
                     <ul>
-                        <li>Clickers: <div class="clicker-persec">0</div></li>
-                        <li>Farm: <div class="farm-persec">0</div></li>
-                        <li>Mine: <div class="mine-persec">0</div></li>
-                    </ul>
+                        <ul>
+                            <li>Clickers: <span id="clicker-count">0</span> at <span id="clicker-persec">0</span>/sec</li>
+                            <li>Farms: <span id="farm-count">0</span> at <span id="farm-persec">0</span>/sec</li>
+                            <li>Mines: <span id="mine-count">0</span> at <span id="mine-persec">0</span>/sec</li>
+                        </ul>
                 </div>
                 <div class="column">
                     <ul>
-                        <li>Factories: <div class="factory-persec">0</div></li>
-                        <li>Labs: <div class="lab-persec">0</div></li>
-                        <li>Nuclear: <div class="nuclear-persec">0</div></li>
+                        <ul>
+                            <li>Factories: <span id="factory-count">0</span> at <span id="factory-persec">0</span>/sec</li>
+                            <li>Labs: <span id="lab-count">0</span> at <span id="lab-persec">0</span>/sec</li>
+                            <li>Nuclear: <span id="nuclear-count">0</span> at <span id="nuclear-persec">0</span>/sec</li>
+                        </ul>
                     </ul>
                 </div>
             </div>
         </div>
-        
+
 </body>
 
 </html>
