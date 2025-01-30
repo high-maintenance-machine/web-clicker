@@ -153,6 +153,10 @@ nav {
     margin: 5px;
 }
 
+.list-container li div:first-child {
+    width: 50%;
+}
+
 .buy-btn { 
     border: 1px solid var(--brown);
 }
